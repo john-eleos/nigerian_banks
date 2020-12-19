@@ -1,4 +1,3 @@
-import 'package:flutter/services.dart';
 import 'package:nigerian_banks/models/bank_model.dart';
 import 'package:nigerian_banks/models/banks_list.dart';
 
@@ -17,10 +16,6 @@ isValidBank({String slug}){
   return (banks.firstWhere((b) => b.name==slug||b.slug==slug, orElse: ()=>null)!=null);
   }
 
-//isValidBank({String slug})=>
-//     getBanks().where((BankModel b)=>
-//    b.name.toLowerCase().contains(slug.toLowerCase()) ||
-//    b.slug.contains(slug.toLowerCase()));
 
 capitalize(String text){
   if (text == null) throw ArgumentError("string: $text");

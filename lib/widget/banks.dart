@@ -252,7 +252,6 @@ class _BanksState extends State<Banks> {
              focusColor:decoration?.focusColor,
              focusedBorder:decoration?.focusedBorder,
              focusedErrorBorder:decoration?.focusedErrorBorder,
-             hasFloatingPlaceholder:decoration?.hasFloatingPlaceholder,
              helperMaxLines:decoration?.helperMaxLines,
              helperStyle:decoration?.helperStyle,
              helperText:decoration?.helperText,
