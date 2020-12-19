@@ -30,9 +30,5 @@ jobs:
             "expiration": 1608367717299
           }
           EOF
-      - name: Delete all builds
-        run: flutter clean 
-      - name: check example and clean
-        run: cd example && flutter clean 
       - name: Publish package
         run: pub publish -f
