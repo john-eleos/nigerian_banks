@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/nigerian_banks.iml" filepath="$PROJECT_DIR$/nigerian_banks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/nigerian_banks_android.iml" filepath="$PROJECT_DIR$/android/nigerian_banks_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/android/nigerian_banks_example_android.iml" filepath="$PROJECT_DIR$/example/android/nigerian_banks_example_android.iml" />
+    </modules>
+  </component>
+</project>
