@@ -3,7 +3,7 @@
 A simple ( maybe not :sleepy:) plugin for adding nigerian banks to your forms..... it's all vibes and inshallah, but it works good ( if it doesn't do what you are looking for, feel free to report an issue :unamused: or just fork the damn thing :stuck_out_tongue_winking_eye:)
 
 ### Screenshots
-| (assets/images/a.png) | (assets/images/b.png) | (assets/images/c.png) |
+| <img src="assets/images/a.png"/> | <img src="assets/images/b.png"/> | <img src="assets/images/c.png"/> |
 
 ### What's new
   - Added list of banks and their logo ( it's 39 right now feel free to add more in lib/models/banks_list.dart) and oh don't forget to add logo into assets/images :innocent:
@@ -12,15 +12,6 @@ A simple ( maybe not :sleepy:) plugin for adding nigerian banks to your forms...
 ### Features
   - Selector (dropdown, bottom sheet and dialog modes)
   - Search
-
-
-```dart
-    String phoneNumber =  '+234 500 500 5005';
-    BankModel number = await BankModel.getRegionInfoFromBankModel(phoneNumber);
-    String parsableNumber = number.parseNumber();
-    `controller reference`.text = parsableNumber
-```
-
 
 # Usage
 
@@ -75,15 +66,6 @@ A simple ( maybe not :sleepy:) plugin for adding nigerian banks to your forms...
     });
 ```|
 
-```dart
-SelectorConfig({
-    this.selectorType = PhoneInputSelectorType.DROPDOWN,
-    this.showFlags = true,
-    this.useEmoji = false,
-    this.backgroundColor = Colors.white,
-    this.countryComparator,
-});
-```
 
 | Parameter                       | Type                   |    Initial Value          |
 |---------------------------------|------------------------|---------------------------|
@@ -138,7 +120,7 @@ and to
 <a href="https://github.com/natintosh/intl_phone_number_input/graphs/contributors">
    <img src="https://contrib.rocks/image?repo=natintosh/intl_phone_number_input" />
 </a>
-for the [intl_phone_number_input] (https://github.com/natintosh/intl_phone_number_input) repo
+for the [intl_phone_number_input](https://github.com/natintosh/intl_phone_number_input) repo
 
 
 Made with [contributors-img](https://contrib.rocks).
