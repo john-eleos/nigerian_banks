@@ -45,7 +45,6 @@ class Banks extends StatefulWidget {
           this.autoValidateMode = AutovalidateMode.disabled,
           this.ignoreBlank = false,
           this.bankSelectorScrollControlled = true,
-          this.locale,
           this.textStyle,
           this.selectorTextStyle,
           this.inputBorder,
@@ -82,7 +81,6 @@ class Banks extends StatefulWidget {
   final bool ignoreBlank;
   final bool bankSelectorScrollControlled;
 
-  final String locale;
 
   final TextStyle textStyle;
   final TextStyle selectorTextStyle;
