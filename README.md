@@ -64,8 +64,8 @@ A simple ( maybe not :sleepy:) plugin for adding nigerian banks to your forms...
       this.backgroundColor = Colors.white,
       this.bankComparator,
     });
-```|
-
+```
+## Parameters
 
 | Parameter                       | Type                   |    Initial Value          |
 |---------------------------------|------------------------|---------------------------|
