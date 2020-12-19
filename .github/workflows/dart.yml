@@ -1,0 +1,34 @@
+name: Dart
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    # Note that this workflow uses the latest stable version of the Dart SDK.
+    # Docker images for other release channels - like dev and beta - are also
+    # available. See https://hub.docker.com/r/google/dart/ for the available
+    # images.
+    container:
+      image:  google/dart:latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup credentials
+        run: | 
+          mkdir -p ~/.pub-cache 
+          cat <<EOF > ~/.pub-cache/credentials.json
+          {
+            "accessToken":"ya29.a0AfH6SMABoZ8LKlnwN53WsgTq7b0WVe12ruTOfMbqKqz2cuhVfU7bCDE6h0qytlhFIV0xNj3cc59owb0X3kxLqK0S9qZdlai-8-LUVAIbqAyw9xYF3dA5M5xx02u-KRrMs2KoeiWwDsnXQSd7Swug_hrS39nDxqmUN81RWYfODXk",
+            "refreshToken":"1//034PzUTqBKILECgYIARAAGAMSNwF-L9IrqT0JEH29ozBxarE0PUBcg1rgJB9mqLAG_eFylHWgYZGYkQOqQtipRdkZy1at-F2fKsI","idToken":"eyJhbGciOiJSUzI1NiIsImtpZCI6ImUxOTdiZjJlODdiZDE5MDU1NzVmOWI2ZTVlYjQyNmVkYTVkNTc0ZTMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiODE4MzY4ODU1MTA4LThncmQyZWc5dGo5ZjM4b3M2ZjF1cmJjdnNxMzk5dThuLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiODE4MzY4ODU1MTA4LThncmQyZWc5dGo5ZjM4b3M2ZjF1cmJjdnNxMzk5dThuLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTA0NDE1MzQ5OTQ0NDYwMjM1Njg5IiwiZW1haWwiOiJvc3VuaWZlZGF5b0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6Ii1pY2VOdVkzQjJUbDNSbjF2aWRnbFEiLCJpYXQiOjE2MDgzNjQxMjgsImV4cCI6MTYwODM2NzcyOH0.QGvZutrNYSNqUNPqABTp_m8cIUlxYjqVl6t32lwbt8dvprkvMUrt-HVB0ZpVJGfR3GrkdhAwWX0U4canER1unnHQ8TMHH3JMFTFFwesT6aRVsHVEkiMI-Zo8otMMyHAUkhQHLSjusynisLjJ-VwYLb3Hez7rR_IotBu6FvDbgCNprvV9-MYRHJM5Rp_JWbn6PpK1cuYZb5mtFhj_lf2LeHF-ALSALBOtRhvC-d6v6jMNjVflHtOg1wFlJilx1qjatSS8SbkOvqLUB-_lXjukDSET3GPv-8rCnzH0k_4yO1njE-57p_BOBN6z-C9KjZjpZWVmB1istQalETX-2Yp0_Q",
+            "tokenEndpoint":"https://accounts.google.com/o/oauth2/token",
+            "scopes": [ "openid", "https://www.googleapis.com/auth/userinfo.email" ],
+            "expiration": 1608367717299
+          }
+          EOF
+      - name: Publish package
+        run: pub publish -f
