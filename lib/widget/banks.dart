@@ -294,11 +294,7 @@ class _BanksState extends State<Banks> {
             suffixIconConstraints: decoration?.suffixIconConstraints,
             suffixStyle: decoration?.suffixStyle,
             suffixText: decoration?.suffixText,
-            prefixIcon: Container(
-              padding: EdgeInsets.only(left: 20),
-              width: 100,
-              child: prefix,
-            ),
+            prefixIcon: prefix,
             prefix: decoration?.prefix,
             prefixIconConstraints: decoration?.prefixIconConstraints,
             prefixStyle: decoration?.prefixStyle,
@@ -307,11 +303,7 @@ class _BanksState extends State<Banks> {
         : InputDecoration(
             border: widget.inputBorder ?? UnderlineInputBorder(),
             hintText: widget.hintText,
-            prefixIcon: Container(
-              padding: EdgeInsets.only(left: 20),
-              width: 100,
-              child: prefix,
-            ),
+            prefixIcon: prefix,
           );
   }
 
@@ -370,10 +362,10 @@ class _BanksState extends State<Banks> {
                       style: widget.textStyle,
                       decoration: this.getInputDecoration(
                         decoration: widget.inputDecoration,
-                        prefix: Item(
+                        prefix: (widget.showLogo)?Item(
                           bank: bank,
                           showLogo: widget.selectorConfig?.showLogo,
-                        ),
+                        ):null,
                       ),
                       onEditingComplete: widget.onSubmit,
                       onFieldSubmitted: widget.onFieldSubmitted,
@@ -401,10 +393,10 @@ class _BanksState extends State<Banks> {
                   style: widget.textStyle,
                   decoration: this.getInputDecoration(
                     decoration: widget.inputDecoration,
-                    prefix: Item(
+                    prefix: (widget.showLogo)?Item(
                       bank: bank,
                       showLogo: widget.selectorConfig?.showLogo,
-                    ),
+                    ):null,
                   ),
                   onEditingComplete: widget.onSubmit,
                   onFieldSubmitted: widget.onFieldSubmitted,
@@ -449,10 +441,10 @@ class _BanksState extends State<Banks> {
                 style: widget.textStyle,
                 decoration: this.getInputDecoration(
                   decoration: widget.inputDecoration,
-                  prefix: Item(
+                  prefix: (widget.showLogo)?Item(
                     bank: bank,
                     showLogo: widget.selectorConfig?.showLogo,
-                  ),
+                  ):null,
                 ),
                 onEditingComplete: widget.onSubmit,
                 onFieldSubmitted: widget.onFieldSubmitted,

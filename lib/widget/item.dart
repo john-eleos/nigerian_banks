@@ -19,11 +19,9 @@ class Item extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: _Logo(
-        bank: bank,
-        showLogo: showLogo,
-      ),
+    return _Logo(
+      bank: bank,
+      showLogo: showLogo,
     );
   }
 }
@@ -44,6 +42,7 @@ class _Logo extends StatelessWidget {
     return bank != null && showLogo
         ? bank?.logo != null
             ? Container(
+                margin: EdgeInsets.only(left: 10, right: 10),
                 height: 25,
                 width: 25,
                 decoration: BoxDecoration(
