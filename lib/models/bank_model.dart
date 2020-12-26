@@ -6,12 +6,9 @@ import 'dart:math';
 List<BankModel> bankModelFromJson(String str) =>
     List<BankModel>.from(json.decode(str).map((x) => BankModel.fromJson(x)));
 
-
-
 /// [bankModelToJson] converts [List] object of [BankModel] class to [bankList] json string
 String bankModelToJson(List<BankModel> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
-
 
 /// [BankModel] class used for serializing the bankList json
 /// [BankModel.name] variable to hold name of the bank

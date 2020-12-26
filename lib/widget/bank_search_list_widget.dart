@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:nigerian_banks/models/bank_model.dart';
 import 'package:nigerian_banks/utils/test/test_helper.dart';
 
-
 /// [BankModelSearchListWidget] class for the search list
 /// [BankModelSearchListWidget.banks]
 /// [BankModelSearchListWidget.searchBoxDecoration]
@@ -46,12 +45,14 @@ class _BankModelSearchListWidgetState extends State<BankModelSearchListWidget> {
     _searchController?.dispose();
     super.dispose();
   }
-/// [getSearchBoxDecoration] function to return [InputDecoration] for searchBox if it's not null else returns a basic decoration with [labelText]
+
+  /// [getSearchBoxDecoration] function to return [InputDecoration] for searchBox if it's not null else returns a basic decoration with [labelText]
   InputDecoration getSearchBoxDecoration() {
     return widget.searchBoxDecoration ??
         InputDecoration(labelText: 'Search by bank name or dial code');
   }
-/// [filterCountries] function returns banks with its [BankModel] contains the value searched
+
+  /// [filterCountries] function returns banks with its [BankModel] contains the value searched
   List<BankModel> filterCountries() {
     final value = _searchController.text.trim();
 

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nigerian_banks/models/bank_model.dart';
 
-
-
 /// [Item] class renders the bank logo with an option to either show the logo or not using the [_Logo] class.
 ///
 /// [Item.bank] is the bank to be rendered
@@ -29,7 +27,6 @@ class Item extends StatelessWidget {
     );
   }
 }
-
 
 /// [_Logo] class to show bank logo
 /// [_Logo.bank] is the bank to be rendered

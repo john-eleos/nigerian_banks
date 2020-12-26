@@ -15,8 +15,10 @@ class SelectorConfig {
   /// [showLogo], displays logo along side banks info on selector button
   /// and list items within the selector
   final bool showLogo;
+
   /// [showCode], displays bank code along side banks info on selector button
   final bool showCode;
+
   /// [backgroundColor] color for the selector modal
   final Color backgroundColor;
 

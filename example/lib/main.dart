@@ -49,8 +49,11 @@ class _MyAppState extends State<MyApp> {
           child: Banks(
             showLogo: false,
             banks: banks,
-            onInputChanged: (BankModel b)=>print(b.name),
-            selectorConfig: SelectorConfig(selectorType: BankInputSelectorType.BOTTOM_SHEET, showLogo: false, showCode: false),
+            onInputChanged: (BankModel b) => print(b.name),
+            selectorConfig: SelectorConfig(
+                selectorType: BankInputSelectorType.BOTTOM_SHEET,
+                showLogo: false,
+                showCode: false),
           ),
         ),
       ),

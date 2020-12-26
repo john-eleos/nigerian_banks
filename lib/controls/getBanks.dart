@@ -4,10 +4,10 @@ import 'package:nigerian_banks/models/banks_list.dart';
 /// [getBanks] return list of [BankModel] object
 getBanks() => bankModelFromJson(bankList);
 
-
 /// [initialBanks] return initial bank if selected else it returns the first bank in the [List] of [BankModel]
 initialBanks({List<BankModel> banks, String slug}) =>
     banks.firstWhere((b) => b.slug == slug, orElse: () => banks[0]);
+
 /// [isValidBank] checks if selected bank exist in the list of banks
 isValidBank({String slug}) {
   List<BankModel> banks = getBanks();
@@ -15,6 +15,7 @@ isValidBank({String slug}) {
           orElse: () => null) !=
       null);
 }
+
 /// [capitalize] formats text and returns its capitalized form
 capitalize(String text) {
   if (text == null) throw ArgumentError("string: $text");

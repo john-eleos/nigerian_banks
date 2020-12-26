@@ -125,7 +125,8 @@ class _BanksState extends State<Banks> {
   BankModel bank;
   List<BankModel> banks = [];
   bool isNotValid = true;
-///
+
+  ///
   /// [initState] entry point of the widget, gets the banks and assigns [TextEditingController] to the widget
   @override
   void initState() {
@@ -134,7 +135,6 @@ class _BanksState extends State<Banks> {
     startWidget();
     super.initState();
   }
-
 
   @override
   void setState(fn) {
@@ -479,7 +479,8 @@ class _BanksState extends State<Banks> {
       );
     }).toList();
   }
-/// [showBankModelSelectorDialog] returns a modal with list of banks
+
+  /// [showBankModelSelectorDialog] returns a modal with list of banks
   Future<BankModel> showBankModelSelectorDialog(
       BuildContext context, List<BankModel> banks) {
     return showDialog(
@@ -499,7 +500,8 @@ class _BanksState extends State<Banks> {
       ),
     );
   }
-/// [showBankModelSelectorBottomSheet] return a bottom modal with list of banks to select from
+
+  /// [showBankModelSelectorBottomSheet] return a bottom modal with list of banks to select from
   Future<BankModel> showBankModelSelectorBottomSheet(
       BuildContext context, List<BankModel> banks) {
     return showModalBottomSheet(
