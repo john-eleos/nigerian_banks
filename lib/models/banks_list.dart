@@ -1,5 +1,5 @@
 
-
+/// [bankList] a string with json list of banks
 
 String bankList = """
 [

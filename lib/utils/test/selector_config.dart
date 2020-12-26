@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nigerian_banks/models/bank_model.dart';
 import 'package:nigerian_banks/widget/banks.dart';
+
 /// [BankModelComparator] takes two banks: A and B.
 ///
 /// Should return -1 if A precedes B, 0 if A is equal to B and 1 if B precedes A
@@ -14,9 +15,9 @@ class SelectorConfig {
   /// [showLogo], displays logo along side banks info on selector button
   /// and list items within the selector
   final bool showLogo;
+  /// [showCode], displays bank code along side banks info on selector button
   final bool showCode;
-
-
+  /// [backgroundColor] color for the selector modal
   final Color backgroundColor;
 
   /// [bankComparator], sort the bank list according to the comparator.
@@ -26,7 +27,8 @@ class SelectorConfig {
 
   const SelectorConfig({
     this.selectorType = BankInputSelectorType.BOTTOM_SHEET,
-    this.showLogo = true, this.showCode,
+    this.showLogo = true,
+    this.showCode,
     this.backgroundColor = Colors.white,
     this.bankComparator,
   });

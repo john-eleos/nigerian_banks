@@ -1,6 +1,6 @@
 name: nigerian_banks
 description: This package contain the list of banks in Nigeria and their logo, the widget is highly customiseable.
-version: 0.0.2+1
+version: 0.0.2+4
 homepage: https://github.com/ELEOS-MAP/nigerian_banks
 
 environment:
@@ -33,6 +33,11 @@ flutter:
         pluginClass: NigerianBanksPlugin
       ios:
         pluginClass: NigerianBanksPlugin
+      macos:
+        pluginClass: NigerianBanksPlugin
+      web:
+        pluginClass: NigerianBanksPlugin
+        fileName: nigerian_banks.dart
 
   # To add assets to your plugin package, add an assets section, like this:
 #  assets:
