@@ -3,12 +3,17 @@
 A simple ( maybe not :sleepy:) plugin for adding nigerian banks to your forms..... it's all vibes and inshallah, but it works good ( if it doesn't do what you are looking for, feel free to report an issue :unamused: or just fork the damn thing :stuck_out_tongue_winking_eye:)
 
 ### Screenshots
-| <img src="assets/images/a.png" width="240" height="430" /> | <img src="assets/images/b.png" width="240" height="430" /> | <img src="assets/images/c.png" width="240" height="430" /> |
+ <img src="assets/images/a.png" width="240" height="430" />  <img src="assets/images/b.png" width="240" height="430" />  <img src="assets/images/c.png" width="240" height="430" />
 
 ### What's new
   - Added list of banks and their logo ( it's 39 right now feel free to add more in lib/models/banks_list.dart) and oh don't forget to add logo into assets/images :innocent:
   - Search widget with modes.
-  - You can now create your list of banks by assigning a BankModel list to the class banks property
+  - You can now create your list of banks by assigning a ```dart BankModel``` list to the ```dart this.banks property```
+  ```dart
+  List<BankModel> banks = [BanksModel(name:"EleosBank", slug:"eleos_banks", logo:"https://eleeos.com/dummy.png", code:"281",ussd:"829")];
+  Banks(banks:banks);
+```
+
 
 ### Features
   - Selector (dropdown, bottom sheet and dialog modes)
