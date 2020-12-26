@@ -34,20 +34,16 @@ class _Logo extends StatelessWidget {
     return bank != null && showLogo
            ? bank?.logo != null
                     ?
-                  SizedBox(
+                  Container(
                     height: 25,
                     width: 25,
-                    child: Container(
-                      height: 25,
-                      width: 25,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                          image: DecorationImage(
-                            image: AssetImage(bank.logo, package: 'nigerian_banks'),
-                            fit: BoxFit.contain,
-                            )
-                          ),
-                      ),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                        image: DecorationImage(
+                          image: AssetImage(bank.logo, package: 'nigerian_banks'),
+                          fit: BoxFit.contain,
+                          )
+                        ),
                     )
                     : SizedBox.shrink()
            : SizedBox.shrink();

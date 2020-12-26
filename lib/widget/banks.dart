@@ -146,7 +146,7 @@ class _BanksState extends State<Banks> {
   /// [loadBanks] load up list of banks and returns initial bank.
   void loadBanks(){
     if(mounted){
-      List<BankModel> banks = getBanks();
+      List<BankModel> banks =  widget.banks??getBanks();
       BankModel bank =initialBanks( banks: banks, slug:widget.initialValue?.slug ?? '');
 
       setState(() {
@@ -385,12 +385,10 @@ class _BanksState extends State<Banks> {
                    decoration: this.getInputDecoration(
                      decoration:widget.inputDecoration,
 
-                     prefix:  Container(
-                       padding: EdgeInsets.all(5),
-                         child:Item(
+                     prefix:  Item(
                        bank: bank,
                        showLogo: widget.selectorConfig?.showLogo,
-                       )),
+                       ),
                      ),
                    onEditingComplete: widget.onSubmit,
                    onFieldSubmitted: widget.onFieldSubmitted,
@@ -419,12 +417,10 @@ class _BanksState extends State<Banks> {
         decoration: this.getInputDecoration(
           decoration:widget.inputDecoration,
 
-          prefix:  Container(
-            padding: EdgeInsets.all(5),
-              child:Item(
+          prefix: Item(
           bank: bank,
           showLogo: widget.selectorConfig?.showLogo,
-          )),
+          ),
           ),
         onEditingComplete: widget.onSubmit,
         onFieldSubmitted: widget.onFieldSubmitted,
@@ -470,12 +466,10 @@ class _BanksState extends State<Banks> {
                  decoration: this.getInputDecoration(
                    decoration:widget.inputDecoration,
 
-                   prefix:  Container(
-                     padding: EdgeInsets.all(5),
-                   child:Item(
+                   prefix:  Item(
                      bank: bank,
                      showLogo: widget.selectorConfig?.showLogo,
-                     )),
+                     ),
                    ),
                  onEditingComplete: widget.onSubmit,
                  onFieldSubmitted: widget.onFieldSubmitted,

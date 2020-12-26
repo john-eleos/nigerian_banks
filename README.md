@@ -7,7 +7,8 @@ A simple ( maybe not :sleepy:) plugin for adding nigerian banks to your forms...
 
 ### What's new
   - Added list of banks and their logo ( it's 39 right now feel free to add more in lib/models/banks_list.dart) and oh don't forget to add logo into assets/images :innocent:
-  - Search widget with modes,
+  - Search widget with modes.
+  - You can now create your list of banks by assigning a BankModel list to the class banks property
 
 ### Features
   - Selector (dropdown, bottom sheet and dialog modes)

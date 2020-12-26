@@ -24,6 +24,20 @@ class _MyAppState extends State<MyApp> {
   }
 
   BankModel bankModel;
+  List<BankModel> banks = [
+    BankModel(name: "Gtbank", slug: "gt_bank", logo: ""),
+    BankModel(name: "Gtbank", slug: "gt_bank", logo: ""),
+    BankModel(name: "Gtbank", slug: "gt_bank", logo: ""),
+    BankModel(name: "Gtbank", slug: "gt_bank", logo: ""),
+    BankModel(name: "Gtbank", slug: "gt_bank", logo: ""),
+    BankModel(name: "Gtbank", slug: "gt_bank", logo: ""),
+    BankModel(name: "Gtbank", slug: "gt_bank", logo: ""),
+    BankModel(name: "Gtbank", slug: "gt_bank", logo: ""),
+    BankModel(name: "Gtbank", slug: "gt_bank", logo: ""),
+    BankModel(name: "Gtbank", slug: "gt_bank", logo: ""),
+    BankModel(name: "Gtbank", slug: "gt_bank", logo: ""),
+    BankModel(name: "Gtbank", slug: "gt_bank", logo: ""),
+  ];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -33,8 +47,10 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Center(
           child: Banks(
+            showLogo: false,
+            banks: banks,
             onInputChanged: (BankModel b)=>print(b.name),
-            selectorConfig: SelectorConfig(selectorType: BankInputSelectorType.BOTTOM_SHEET, showLogo: true, showCode: false),
+            selectorConfig: SelectorConfig(selectorType: BankInputSelectorType.BOTTOM_SHEET, showLogo: false, showCode: false),
           ),
         ),
       ),
