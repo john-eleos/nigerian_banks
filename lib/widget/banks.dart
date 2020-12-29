@@ -362,10 +362,12 @@ class _BanksState extends State<Banks> {
                       style: widget.textStyle,
                       decoration: this.getInputDecoration(
                         decoration: widget.inputDecoration,
-                        prefix: (widget.showLogo)?Item(
-                          bank: bank,
-                          showLogo: widget.selectorConfig?.showLogo,
-                        ):null,
+                        prefix: (widget.showLogo)
+                            ? Item(
+                                bank: bank,
+                                showLogo: widget.selectorConfig?.showLogo,
+                              )
+                            : null,
                       ),
                       onEditingComplete: widget.onSubmit,
                       onFieldSubmitted: widget.onFieldSubmitted,
@@ -393,10 +395,12 @@ class _BanksState extends State<Banks> {
                   style: widget.textStyle,
                   decoration: this.getInputDecoration(
                     decoration: widget.inputDecoration,
-                    prefix: (widget.showLogo)?Item(
-                      bank: bank,
-                      showLogo: widget.selectorConfig?.showLogo,
-                    ):null,
+                    prefix: (widget.showLogo)
+                        ? Item(
+                            bank: bank,
+                            showLogo: widget.selectorConfig?.showLogo,
+                          )
+                        : null,
                   ),
                   onEditingComplete: widget.onSubmit,
                   onFieldSubmitted: widget.onFieldSubmitted,
@@ -441,10 +445,12 @@ class _BanksState extends State<Banks> {
                 style: widget.textStyle,
                 decoration: this.getInputDecoration(
                   decoration: widget.inputDecoration,
-                  prefix: (widget.showLogo)?Item(
-                    bank: bank,
-                    showLogo: widget.selectorConfig?.showLogo,
-                  ):null,
+                  prefix: (widget.showLogo)
+                      ? Item(
+                          bank: bank,
+                          showLogo: widget.selectorConfig?.showLogo,
+                        )
+                      : null,
                 ),
                 onEditingComplete: widget.onSubmit,
                 onFieldSubmitted: widget.onFieldSubmitted,

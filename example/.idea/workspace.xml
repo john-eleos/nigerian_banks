@@ -4,12 +4,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef0124fe-2ccd-4891-b5ff-e2b7bea537b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.packages" beforeDir="false" afterPath="$PROJECT_DIR$/../.packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/widget/banks.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/widget/banks.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/widget/item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/widget/item.dart" afterDir="false" />
-    </list>
+    <list default="true" id="ef0124fe-2ccd-4891-b5ff-e2b7bea537b1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
