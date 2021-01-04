@@ -36,7 +36,7 @@ class _BankModelSearchListWidgetState extends State<BankModelSearchListWidget> {
 
   @override
   void initState() {
-    filteredBanks = filterCountries();
+    filteredBanks = filterBanks();
     super.initState();
   }
 
@@ -52,8 +52,8 @@ class _BankModelSearchListWidgetState extends State<BankModelSearchListWidget> {
         InputDecoration(labelText: 'Search by bank name or dial code');
   }
 
-  /// [filterCountries] function returns banks with its [BankModel] contains the value searched
-  List<BankModel> filterCountries() {
+  /// [filterBanks] function returns banks with its [BankModel] contains the value searched
+  List<BankModel> filterBanks() {
     final value = _searchController.text.trim();
 
     if (value.isNotEmpty) {
@@ -86,7 +86,7 @@ class _BankModelSearchListWidgetState extends State<BankModelSearchListWidget> {
             controller: _searchController,
             autofocus: widget.autoFocus,
             onChanged: (value) =>
-                setState(() => filteredBanks = filterCountries()),
+                setState(() => filteredBanks = filterBanks()),
           ),
         ),
         Expanded(
