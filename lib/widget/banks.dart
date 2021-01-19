@@ -186,8 +186,9 @@ class _BanksState extends State<Banks> {
     if (this.mounted) {
 //      String parsedBankName  =  controller.text;
       String parsedBankName = this.bank.name;
+      String parsedSlug = this.bank?.slug;
 
-      getBankName(parsedBankName, this.bank?.name).then((bankName) {
+      getBankName(parsedBankName, parsedSlug).then((bankName) {
         if (bankName == null) {
           String name = capitalize(parsedBankName);
 
@@ -236,7 +237,7 @@ class _BanksState extends State<Banks> {
   Future<String> getBankName(String bankName, String slug) async {
     if (bankName.isNotEmpty && slug.isNotEmpty) {
       try {
-        bool isValidBankName = await await isValidBank(slug: bankName, banks:this.banks);
+        bool isValidBankName = await await isValidBank(slug: slug,bankName:bankName , banks:this.banks);
 
         if (isValidBankName) {
           return await capitalize(bankName);
