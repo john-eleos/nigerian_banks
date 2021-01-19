@@ -1,6 +1,6 @@
 name: nigerian_banks
 description: This package contain the list of banks in Nigeria and their logo, the widget is highly customiseable.
-version: 0.0.2+9
+version: 0.0.2+10
 homepage: https://github.com/ELEOS-MAP/nigerian_banks
 
 environment:
