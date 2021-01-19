@@ -236,7 +236,7 @@ class _BanksState extends State<Banks> {
   Future<String> getBankName(String bankName, String slug) async {
     if (bankName.isNotEmpty && slug.isNotEmpty) {
       try {
-        bool isValidBankName = await await isValidBank(slug: bankName);
+        bool isValidBankName = await await isValidBank(slug: bankName, banks:this.banks);
 
         if (isValidBankName) {
           return await capitalize(bankName);
