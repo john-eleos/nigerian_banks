@@ -9,9 +9,9 @@ initialBanks({List<BankModel> banks, String slug}) =>
     banks.firstWhere((b) => b.slug == slug, orElse: () => banks[0]);
 
 /// [isValidBank] checks if selected bank exist in the list of banks
-isValidBank({String slug,List<BankModel> banks}) {
+isValidBank({String slug, String bankName,List<BankModel> banks}) {
 //    = getBanks();
-  return (banks.firstWhere((b) => b.name == slug || b.slug == slug,
+  return (banks.firstWhere((b) => b.name == bankName || b.slug == slug,
           orElse: () => null) !=
       null);
 }
